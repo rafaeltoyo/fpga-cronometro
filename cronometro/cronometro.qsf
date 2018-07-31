@@ -1,0 +1,170 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+# Date created = 09:33:05  April 11, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		cronometro_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY cronometro
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:33:05  APRIL 11, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE ../temporizador/temporizador.vhd
+set_global_assignment -name VHDL_FILE ../rebounce/rebounce.vhd
+set_global_assignment -name VHDL_FILE ../divisor/divisor.vhd
+set_global_assignment -name VHDL_FILE ../dec_bcd_7seg/dec_bcd_7seg.vhd
+set_global_assignment -name VHDL_FILE ../cont_100/cont_100.vhd
+set_global_assignment -name VHDL_FILE ../cont_60/cont_60.vhd
+set_global_assignment -name VHDL_FILE ../cont_24/cont_24.vhd
+set_global_assignment -name VHDL_FILE ../cont_16/cont_16.vhd
+set_global_assignment -name VHDL_FILE cronometro.vhd
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_Y26 -to seg1[3]
+set_location_assignment PIN_G26 -to btn_stop
+set_location_assignment PIN_AF10 -to cen0[0]
+set_location_assignment PIN_AB12 -to cen0[1]
+set_location_assignment PIN_V13 -to cen0[6]
+set_location_assignment PIN_V14 -to cen0[5]
+set_location_assignment PIN_AE11 -to cen0[4]
+set_location_assignment PIN_AD11 -to cen0[3]
+set_location_assignment PIN_AC12 -to cen0[2]
+set_location_assignment PIN_AB24 -to cen1[6]
+set_location_assignment PIN_AA23 -to cen1[5]
+set_location_assignment PIN_AA24 -to cen1[4]
+set_location_assignment PIN_Y22 -to cen1[3]
+set_location_assignment PIN_W21 -to cen1[2]
+set_location_assignment PIN_V21 -to cen1[1]
+set_location_assignment PIN_V20 -to cen1[0]
+set_location_assignment PIN_Y24 -to seg0[6]
+set_location_assignment PIN_AB25 -to seg0[5]
+set_location_assignment PIN_AB26 -to seg0[4]
+set_location_assignment PIN_AC26 -to seg0[3]
+set_location_assignment PIN_AC25 -to seg0[2]
+set_location_assignment PIN_V22 -to seg0[1]
+set_location_assignment PIN_AB23 -to seg0[0]
+set_location_assignment PIN_W24 -to seg1[6]
+set_location_assignment PIN_U22 -to seg1[5]
+set_location_assignment PIN_Y25 -to seg1[4]
+set_location_assignment PIN_AA26 -to seg1[2]
+set_location_assignment PIN_AA25 -to seg1[1]
+set_location_assignment PIN_Y23 -to seg1[0]
+set_location_assignment PIN_T3 -to min0[6]
+set_location_assignment PIN_R6 -to min0[5]
+set_location_assignment PIN_R7 -to min0[4]
+set_location_assignment PIN_T4 -to min0[3]
+set_location_assignment PIN_U2 -to min0[2]
+set_location_assignment PIN_U1 -to min0[1]
+set_location_assignment PIN_U9 -to min0[0]
+set_location_assignment PIN_R3 -to min1[6]
+set_location_assignment PIN_R4 -to min1[5]
+set_location_assignment PIN_R5 -to min1[4]
+set_location_assignment PIN_T9 -to min1[3]
+set_location_assignment PIN_P7 -to min1[2]
+set_location_assignment PIN_P6 -to min1[1]
+set_location_assignment PIN_T2 -to min1[0]
+set_location_assignment PIN_M4 -to hor0[6]
+set_location_assignment PIN_M5 -to hor0[5]
+set_location_assignment PIN_M3 -to hor0[4]
+set_location_assignment PIN_M2 -to hor0[3]
+set_location_assignment PIN_P3 -to hor0[2]
+set_location_assignment PIN_P4 -to hor0[1]
+set_location_assignment PIN_R2 -to hor0[0]
+set_location_assignment PIN_N9 -to hor1[6]
+set_location_assignment PIN_P9 -to hor1[5]
+set_location_assignment PIN_L7 -to hor1[4]
+set_location_assignment PIN_L6 -to hor1[3]
+set_location_assignment PIN_L9 -to hor1[2]
+set_location_assignment PIN_L2 -to hor1[1]
+set_location_assignment PIN_L3 -to hor1[0]
+set_location_assignment PIN_Y18 -to ampm
+set_location_assignment PIN_P23 -to btn_mode
+set_location_assignment PIN_N23 -to btn_rst
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_AA20 -to mode
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clk -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[0]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[1]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[2]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[3]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[0]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[1]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[2]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[3]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[0]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[1]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[2]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont1|Q_tmp[3]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[0]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[1]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[2]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "temporizador:contadores|cont_24:contH|cont_100:contPai|cont_16:cont2|Q_tmp[3]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=8" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=8" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT trigger_in -to en_temp_s -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=50099" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=55" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=131072" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=25859" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=131072" -section_id auto_signaltap_0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE "D:/Biblioteca/Documentos/Arquivos Educação/UTFPR - Ensino superior/7 periodo/Lógica Reconfigurável/ProjetoCronometro/cronometro/output_files/stp1_auto_stripped.stp"

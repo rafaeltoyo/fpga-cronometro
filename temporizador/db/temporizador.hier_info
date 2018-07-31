@@ -1,0 +1,475 @@
+|temporizador
+rst => cont_24:contH.rst
+rst => cont_60:contM.rst
+rst => cont_60:contS.rst
+rst => cont_100:contC.rst
+clk => cont_24:contH.clk
+clk => cont_60:contM.clk
+clk => cont_60:contS.clk
+clk => cont_100:contC.clk
+clr => cont_24:contH.clr
+clr => cont_60:contM.clr
+clr => cont_60:contS.clr
+clr => cont_100:contC.clr
+en => enS_s.IN1
+en => enM_s.IN1
+en => enH_s.IN1
+en => cont_100:contC.en
+mode => cont_24:contH.mode
+pm <= cont_24:contH.pm
+hor1[0] <= cont_24:contH.Q2[0]
+hor1[1] <= cont_24:contH.Q2[1]
+hor1[2] <= cont_24:contH.Q2[2]
+hor1[3] <= cont_24:contH.Q2[3]
+hor0[0] <= cont_24:contH.Q1[0]
+hor0[1] <= cont_24:contH.Q1[1]
+hor0[2] <= cont_24:contH.Q1[2]
+hor0[3] <= cont_24:contH.Q1[3]
+min1[0] <= cont_60:contM.Q2[0]
+min1[1] <= cont_60:contM.Q2[1]
+min1[2] <= cont_60:contM.Q2[2]
+min1[3] <= cont_60:contM.Q2[3]
+min0[0] <= cont_60:contM.Q1[0]
+min0[1] <= cont_60:contM.Q1[1]
+min0[2] <= cont_60:contM.Q1[2]
+min0[3] <= cont_60:contM.Q1[3]
+seg1[0] <= cont_60:contS.Q2[0]
+seg1[1] <= cont_60:contS.Q2[1]
+seg1[2] <= cont_60:contS.Q2[2]
+seg1[3] <= cont_60:contS.Q2[3]
+seg0[0] <= cont_60:contS.Q1[0]
+seg0[1] <= cont_60:contS.Q1[1]
+seg0[2] <= cont_60:contS.Q1[2]
+seg0[3] <= cont_60:contS.Q1[3]
+cen1[0] <= cont_100:contC.Q2[0]
+cen1[1] <= cont_100:contC.Q2[1]
+cen1[2] <= cont_100:contC.Q2[2]
+cen1[3] <= cont_100:contC.Q2[3]
+cen0[0] <= cont_100:contC.Q1[0]
+cen0[1] <= cont_100:contC.Q1[1]
+cen0[2] <= cont_100:contC.Q1[2]
+cen0[3] <= cont_100:contC.Q1[3]
+
+
+|temporizador|cont_24:contH
+rst => cont_100:contPai.rst
+clk => cont_100:contPai.clk
+clr => clr_s.IN1
+en => clr_s.IN1
+en => cont_100:contPai.en
+mode => Q1.OUTPUTSELECT
+mode => Q1.OUTPUTSELECT
+mode => Q1.OUTPUTSELECT
+mode => Q1.OUTPUTSELECT
+mode => Q2.OUTPUTSELECT
+mode => Q2.OUTPUTSELECT
+mode => Q2.OUTPUTSELECT
+mode => Q2.OUTPUTSELECT
+mode => pm.IN1
+Q1[0] <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+Q1[1] <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+Q1[2] <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+Q1[3] <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+Q2[0] <= Q2.DB_MAX_OUTPUT_PORT_TYPE
+Q2[1] <= Q2.DB_MAX_OUTPUT_PORT_TYPE
+Q2[2] <= Q2.DB_MAX_OUTPUT_PORT_TYPE
+Q2[3] <= Q2.DB_MAX_OUTPUT_PORT_TYPE
+pm <= pm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_24:contH|cont_100:contPai
+rst => cont_16:cont1.rst
+rst => cont_16:cont2.rst
+clk => cont_16:cont1.clk
+clk => cont_16:cont2.clk
+clr => c1clr_s.IN1
+clr => c2clr_s.IN1
+en => c1clr_s.IN1
+en => c2clr_s.IN1
+en => c2en_s.IN1
+en => cont_16:cont1.en
+Q1[0] <= cont_16:cont1.Q[0]
+Q1[1] <= cont_16:cont1.Q[1]
+Q1[2] <= cont_16:cont1.Q[2]
+Q1[3] <= cont_16:cont1.Q[3]
+Q2[0] <= cont_16:cont2.Q[0]
+Q2[1] <= cont_16:cont2.Q[1]
+Q2[2] <= cont_16:cont2.Q[2]
+Q2[3] <= cont_16:cont2.Q[3]
+
+
+|temporizador|cont_24:contH|cont_100:contPai|cont_16:cont1
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_24:contH|cont_100:contPai|cont_16:cont2
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_60:contM
+rst => cont_100:contPai.rst
+clk => cont_100:contPai.clk
+clr => clr_s.IN1
+en => clr_s.IN1
+en => cont_100:contPai.en
+Q1[0] <= cont_100:contPai.Q1[0]
+Q1[1] <= cont_100:contPai.Q1[1]
+Q1[2] <= cont_100:contPai.Q1[2]
+Q1[3] <= cont_100:contPai.Q1[3]
+Q2[0] <= cont_100:contPai.Q2[0]
+Q2[1] <= cont_100:contPai.Q2[1]
+Q2[2] <= cont_100:contPai.Q2[2]
+Q2[3] <= cont_100:contPai.Q2[3]
+
+
+|temporizador|cont_60:contM|cont_100:contPai
+rst => cont_16:cont1.rst
+rst => cont_16:cont2.rst
+clk => cont_16:cont1.clk
+clk => cont_16:cont2.clk
+clr => c1clr_s.IN1
+clr => c2clr_s.IN1
+en => c1clr_s.IN1
+en => c2clr_s.IN1
+en => c2en_s.IN1
+en => cont_16:cont1.en
+Q1[0] <= cont_16:cont1.Q[0]
+Q1[1] <= cont_16:cont1.Q[1]
+Q1[2] <= cont_16:cont1.Q[2]
+Q1[3] <= cont_16:cont1.Q[3]
+Q2[0] <= cont_16:cont2.Q[0]
+Q2[1] <= cont_16:cont2.Q[1]
+Q2[2] <= cont_16:cont2.Q[2]
+Q2[3] <= cont_16:cont2.Q[3]
+
+
+|temporizador|cont_60:contM|cont_100:contPai|cont_16:cont1
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_60:contM|cont_100:contPai|cont_16:cont2
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_60:contS
+rst => cont_100:contPai.rst
+clk => cont_100:contPai.clk
+clr => clr_s.IN1
+en => clr_s.IN1
+en => cont_100:contPai.en
+Q1[0] <= cont_100:contPai.Q1[0]
+Q1[1] <= cont_100:contPai.Q1[1]
+Q1[2] <= cont_100:contPai.Q1[2]
+Q1[3] <= cont_100:contPai.Q1[3]
+Q2[0] <= cont_100:contPai.Q2[0]
+Q2[1] <= cont_100:contPai.Q2[1]
+Q2[2] <= cont_100:contPai.Q2[2]
+Q2[3] <= cont_100:contPai.Q2[3]
+
+
+|temporizador|cont_60:contS|cont_100:contPai
+rst => cont_16:cont1.rst
+rst => cont_16:cont2.rst
+clk => cont_16:cont1.clk
+clk => cont_16:cont2.clk
+clr => c1clr_s.IN1
+clr => c2clr_s.IN1
+en => c1clr_s.IN1
+en => c2clr_s.IN1
+en => c2en_s.IN1
+en => cont_16:cont1.en
+Q1[0] <= cont_16:cont1.Q[0]
+Q1[1] <= cont_16:cont1.Q[1]
+Q1[2] <= cont_16:cont1.Q[2]
+Q1[3] <= cont_16:cont1.Q[3]
+Q2[0] <= cont_16:cont2.Q[0]
+Q2[1] <= cont_16:cont2.Q[1]
+Q2[2] <= cont_16:cont2.Q[2]
+Q2[3] <= cont_16:cont2.Q[3]
+
+
+|temporizador|cont_60:contS|cont_100:contPai|cont_16:cont1
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_60:contS|cont_100:contPai|cont_16:cont2
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_100:contC
+rst => cont_16:cont1.rst
+rst => cont_16:cont2.rst
+clk => cont_16:cont1.clk
+clk => cont_16:cont2.clk
+clr => c1clr_s.IN1
+clr => c2clr_s.IN1
+en => c1clr_s.IN1
+en => c2clr_s.IN1
+en => c2en_s.IN1
+en => cont_16:cont1.en
+Q1[0] <= cont_16:cont1.Q[0]
+Q1[1] <= cont_16:cont1.Q[1]
+Q1[2] <= cont_16:cont1.Q[2]
+Q1[3] <= cont_16:cont1.Q[3]
+Q2[0] <= cont_16:cont2.Q[0]
+Q2[1] <= cont_16:cont2.Q[1]
+Q2[2] <= cont_16:cont2.Q[2]
+Q2[3] <= cont_16:cont2.Q[3]
+
+
+|temporizador|cont_100:contC|cont_16:cont1
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|temporizador|cont_100:contC|cont_16:cont2
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

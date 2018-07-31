@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Documents\cronometro\simulation\modelsim
+Econt_100
+Z1 w1522827664
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dD:\Documents\cronometro\simulation\modelsim
+Z6 8D:/Documents/cronometro/cont_100/cont_100.vhd
+Z7 FD:/Documents/cronometro/cont_100/cont_100.vhd
+l0
+L8
+V<;:IYPB>ek2V8OYF@;nlO1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1522845096.340000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/Documents/cronometro/cont_100/cont_100.vhd|
+Z11 !s107 D:/Documents/cronometro/cont_100/cont_100.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 XnT;Q6WAOmDjEn42Wb6Ye0
+!i10b 1
+Abehav
+R2
+R3
+R4
+DEx4 work 8 cont_100 0 22 <;:IYPB>ek2V8OYF@;nlO1
+l36
+L19
+Vc`8F>_UN_133zF1O:[LoW2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 >kIT8VhRlO6Y?EPUH03I52
+!i10b 1
+Econt_16
+R1
+R2
+R3
+R4
+R5
+Z14 8D:/Documents/cronometro/cont_16/cont_16.vhd
+Z15 FD:/Documents/cronometro/cont_16/cont_16.vhd
+l0
+L8
+VIzClJ<a4Uani@0EYcRCfl3
+!s100 ;acYZ_;Kc=7fV=KOdHTnV3
+R8
+31
+!i10b 1
+Z16 !s108 1522845096.855000
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/Documents/cronometro/cont_16/cont_16.vhd|
+Z18 !s107 D:/Documents/cronometro/cont_16/cont_16.vhd|
+R12
+R13
+Abehav
+R2
+R3
+R4
+DEx4 work 7 cont_16 0 22 IzClJ<a4Uani@0EYcRCfl3
+l25
+L21
+Vg:ZV>90;eGJ[F0J1lVf:M3
+!s100 g<KMaSWod?FQF1`<ZnX`?2
+R8
+31
+!i10b 1
+R16
+R17
+R18
+R12
+R13

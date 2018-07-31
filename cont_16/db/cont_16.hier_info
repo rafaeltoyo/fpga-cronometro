@@ -1,0 +1,35 @@
+|cont_16
+rst => Q_tmp[0].ACLR
+rst => Q_tmp[1].ACLR
+rst => Q_tmp[2].ACLR
+rst => Q_tmp[3].ACLR
+clk => Q_tmp[0].CLK
+clk => Q_tmp[1].CLK
+clk => Q_tmp[2].CLK
+clk => Q_tmp[3].CLK
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+clr => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+en => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+L => Q_tmp.OUTPUTSELECT
+J[0] => Q_tmp.DATAB
+J[1] => Q_tmp.DATAB
+J[2] => Q_tmp.DATAB
+J[3] => Q_tmp.DATAB
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+updown => Q_tmp.OUTPUTSELECT
+Q[0] <= Q_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
